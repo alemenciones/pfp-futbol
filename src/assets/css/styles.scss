@@ -1,0 +1,205 @@
+.main-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+.list-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+    justify-content: center;
+    padding: initial;
+}
+.list {
+    box-sizing: border-box;
+    position: relative;
+    // align-self: flex-start;
+}
+@media screen and (min-width: 520px) {
+    .list {
+        height: 250px;
+    }
+    .divider{
+        display: flex;
+        flex-direction: row;
+    }
+    .ficha{
+      position: fixed;
+    }
+    .image_{
+        flex-shrink: 0;
+    }
+    .data_list_wrapper{
+        height: 100vh;
+    }
+    .close_btn{
+        right: 15px;
+    }
+}
+@media screen and (max-width: 520px) {
+    .divider{
+        display: flex;
+        flex-direction: column;
+    }
+    .close_btn{
+        right: 0;
+    }
+    .list {
+        max-height: 100vw;
+    }
+}
+
+.divide{
+    flex: 1;
+}
+.list img {
+    width: 100%;
+    // height: 100%;
+}
+
+.image{
+   max-width: 200px;
+   max-height: 200px;
+}
+
+.ficha{
+    text-align: center;
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+    z-index:99;
+}
+
+.image_wrapper{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.inner{
+    height: 100%;
+}
+.image_{transition: transform .3s ease-out;}
+.image_:hover{transform: scale(1.050);}
+.image_{
+    min-width: 100%;
+    min-height: 100%;
+}
+.image_not{
+    max-width: 50%;
+    max-height: 50%;
+}
+
+
+.data_list_wrapper{
+    overflow: auto;
+    padding: 40px;
+    box-sizing: border-box;
+}
+.data_list{
+    text-align: left;
+    box-sizing: border-box;
+}
+.data_list label{
+    // display: block;
+}
+
+.data_list input:not(input[type='file']), textarea {
+    display: block;
+    width: 100%;
+    padding: 6px 9px;
+    margin: 10px 0px;
+    box-sizing: border-box;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+.close_btn{
+    position: fixed;
+    top: 0;
+    background: #060606;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    color: white;
+}
+.message {
+    position: fixed;
+    background: red;
+    padding: 20px 30px;
+    bottom: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform .5s ease-out;
+    z-index: 100;
+    max-width: 100%;
+}
+.show{
+    transform: translateX(0%);
+}
+.caption{
+    background: black;
+    color: white;
+    padding: 8px 11px;
+    font-size: 13px;
+    position: absolute;
+    z-index: 9;
+    bottom: 0;
+    margin: 0px;
+}
+header{
+    position: relative;
+    display: block;
+    height: 50px;
+    background-color: #000;
+    box-sizing: border-box;
+}
+header input{
+    font-size: 20px;
+    height: 50px;
+    padding: 5px 13px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    outline: none;
+}
+header button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: white;
+    font-size: 34px;
+    height: 50px;
+    width: 50px;
+}
+.tools{
+    text-align: right;
+    position: relative;
+}
+.button{
+    background-color: #000;
+    padding: 10px 20px;
+    color: white;
+    height: 50px;
+    font-size: 12px;
+}
+#file {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+label.button{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.upload_image_btn {
+    position: absolute;
+    left: 0;
+}
+.upload_image_name {
+    font-size: 14px;
+    padding: 20px 0px;
+    margin: 10px 0px;
+}
